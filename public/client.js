@@ -220,17 +220,8 @@ if(socket !== undefined) {
                 user.setAttribute('class', userStyle);
                 user.setAttribute('style', 'color: ' + data[x].nameColor +';');
                 user.textContent = data[x].name;
-<<<<<<< HEAD
-                text.setAttribute('class', textStyle);
-                text.textContent = ' >> ' + data[x].message; //DP+ linkify( ) taken out due to not working, it replaces like it should, but <a> apears in the message and doesnt work as intended
-                
-                
-                
-=======
-
 
                 /* Prepare time div */
->>>>>>> e38b2dcd98ba46c87d29de6aae9cfa8d3c97debc
                 time.setAttribute('class', timeStyle);
                 time.textContent += data[x].time;
 
@@ -269,23 +260,3 @@ if(socket !== undefined) {
 else {
     setStatus("Could not connect");
 }
-
-
-
-/*
-function linkify(text){     //DP+ Function found on the web to search strings I presume to replace pieces pertaining to url's with the <a> tags to be clickable hyperlinks
-    if (text) {
-        text = text.replace(
-            /((https?\:\/\/)|(www\.))(\S+)(\w{2,4})(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?/gi,
-            function(url){
-                var full_url = url;
-                if (!full_url.match('^https?:\/\/')) {
-                    full_url = 'http://' + full_url;
-                }
-                return '<a href="' + full_url + '">' + url + '</a>';
-            }
-        );
-    }
-    return text;
-}
-*/
